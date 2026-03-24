@@ -10,6 +10,7 @@ import Education from './components/Education';
 import Certifications from './components/Certifications';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollButtons from './components/ScrollButtons';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <ScrollButtons />
       </div>
     </ThemeProvider>
   );

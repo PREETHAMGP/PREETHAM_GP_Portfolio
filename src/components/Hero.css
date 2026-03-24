@@ -232,74 +232,6 @@
   color: var(--primary-color);
 }
 
-/* Scroll Indicator */
-.scroll-indicator {
-  position: absolute;
-  bottom: 1rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text-light);
-  font-size: 0.75rem;
-  animation: bounce 2s infinite;
-  text-decoration: none;
-  cursor: pointer;
-  transition: color var(--transition-fast);
-}
-
-.scroll-indicator:hover {
-  color: var(--primary-color);
-}
-
-.scroll-indicator:hover .mouse {
-  border-color: var(--primary-color);
-}
-
-.mouse {
-  width: 24px;
-  height: 40px;
-  border: 2px solid var(--text-light);
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  padding-top: 8px;
-  transition: border-color var(--transition-fast);
-}
-
-.wheel {
-  width: 4px;
-  height: 8px;
-  background: var(--primary-color);
-  border-radius: 2px;
-  animation: scroll 2s infinite;
-}
-
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateX(-50%) translateY(0);
-  }
-  40% {
-    transform: translateX(-50%) translateY(-10px);
-  }
-  60% {
-    transform: translateX(-50%) translateY(-5px);
-  }
-}
-
-@keyframes scroll {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(6px);
-  }
-}
-
 /* Large Screens */
 @media (min-width: 1400px) {
   .hero-content {
@@ -371,10 +303,6 @@
   .profile-card {
     min-width: 100%;
     max-width: 320px;
-  }
-  
-  .scroll-indicator {
-    display: none;
   }
 }
 
