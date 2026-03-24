@@ -5,23 +5,38 @@ import './Header.css';
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const { isDarkMode, toggleTheme } = useTheme();
 
   useEffect(() => {
+    const sectionIds = ['hero', 'about', 'skills', 'experience', 'education', 'certifications', 'contact'];
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
+      let current = sectionIds[0];
+      for (let id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 80 && rect.bottom > 80) {
+            current = id;
+            break;
+          }
+        }
+      }
+      setActiveSection(current);
     };
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // set on mount
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
-    { href: '#about', label: 'About' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#experience', label: 'Experience' },
-    { href: '#education', label: 'Education' },
-    { href: '#certifications', label: 'Certifications' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#about', label: 'About', id: 'about' },
+    { href: '#skills', label: 'Skills', id: 'skills' },
+    { href: '#experience', label: 'Experience', id: 'experience' },
+    { href: '#education', label: 'Education', id: 'education' },
+    { href: '#certifications', label: 'Certifications', id: 'certifications' },
+    { href: '#contact', label: 'Contact', id: 'contact' },
   ];
 
   const handleNavClick = () => {
@@ -39,7 +54,11 @@ const Header = () => {
           <ul className="nav-list">
             {navLinks.map((link) => (
               <li key={link.href}>
-                <a href={link.href} onClick={handleNavClick}>
+                <a
+                  href={link.href}
+                  onClick={handleNavClick}
+                  className={activeSection === link.id ? 'active' : ''}
+                >
                   {link.label}
                 </a>
               </li>

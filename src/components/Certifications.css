@@ -68,6 +68,7 @@
 
 .achievement-content {
   flex: 1;
+  padding-right: 4.5rem; /* Prevent badge overlap with text */
 }
 
 .achievement-title {
@@ -87,7 +88,7 @@
 
 .achievement-badge {
   position: absolute;
-  top: 1rem;
+  top: 1.25rem;
   right: 1rem;
   font-size: 0.7rem;
   font-weight: 700;
