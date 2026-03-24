@@ -16,11 +16,11 @@ const Hero = () => {
           <h2 className="hero-title">Technical Lead | Full Stack Developer</h2>
           <p className="hero-description">
             Building scalable, high-availability web and mobile applications
-            with 5+ years of expertise in React.js and Node.js microservices
+              with 4+ years of expertise in React.js and Node.js microservices
           </p>
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-number">5+</span>
+                <span className="stat-number">4+</span>
               <span className="stat-label">Years Experience</span>
             </div>
             <div className="stat">

@@ -13,14 +13,14 @@ const About = () => {
               <img src={profileImage} alt="Preetham G P" className="profile-photo" />
             </div>
             <div className="experience-badge">
-              <span className="years">5+</span>
+              <span className="years">4.6</span>
               <span className="text">Years of Experience</span>
             </div>
           </div>
           <div className="about-text">
             <h3>Full Stack Engineer specializing in building exceptional digital experiences</h3>
             <p>
-              I am a Full Stack Engineer with over 5 years of experience, specializing in front-end 
+              I am a Full Stack Engineer with 4.6 years of experience, specializing in front-end 
               development with strong hands-on exposure to backend systems. I build scalable, 
               high-availability web and mobile applications using React.js and Node.js microservices.
             </p>
