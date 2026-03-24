@@ -235,7 +235,7 @@
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -245,6 +245,17 @@
   color: var(--text-light);
   font-size: 0.75rem;
   animation: bounce 2s infinite;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.scroll-indicator:hover {
+  color: var(--primary-color);
+}
+
+.scroll-indicator:hover .mouse {
+  border-color: var(--primary-color);
 }
 
 .mouse {
@@ -255,6 +266,7 @@
   display: flex;
   justify-content: center;
   padding-top: 8px;
+  transition: border-color var(--transition-fast);
 }
 
 .wheel {

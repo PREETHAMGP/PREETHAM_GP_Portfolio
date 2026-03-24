@@ -68,12 +68,12 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <div className="scroll-indicator">
+      <a href="#about" className="scroll-indicator">
         <div className="mouse">
           <div className="wheel"></div>
         </div>
         <span>Scroll Down</span>
-      </div>
+      </a>
     </section>
   );
 };
