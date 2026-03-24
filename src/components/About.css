@@ -1,0 +1,267 @@
+/* About Styles */
+.about {
+  background: var(--background-secondary);
+  transition: background-color var(--transition-normal);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.about-image {
+  position: relative;
+}
+
+.image-frame {
+  position: relative;
+  border-radius: var(--border-radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.profile-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center top;
+  transform: scale(1.02);
+}
+
+.avatar-large {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--gradient-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-large span {
+  font-size: 6rem;
+  font-weight: 800;
+  color: white;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -1rem;
+  right: -1rem;
+  background: var(--card-background);
+  padding: 1.25rem;
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  transition: background-color var(--transition-normal);
+}
+
+.experience-badge .years {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.experience-badge .text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.about-text h3 {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+.about-text strong {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.about-highlights {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--card-background);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.highlight:hover {
+  box-shadow: var(--shadow);
+  transform: translateX(5px);
+}
+
+.highlight-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: rgba(37, 99, 235, 0.1);
+  border-radius: var(--border-radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+}
+
+.highlight-text h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 0.25rem;
+}
+
+.highlight-text p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.about-contact {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.contact-link:hover {
+  color: var(--primary-dark);
+}
+
+.contact-link svg {
+  flex-shrink: 0;
+}
+
+/* Large Screens */
+@media (min-width: 1400px) {
+  .about-content {
+    gap: 5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+  }
+  
+  .about-image {
+    max-width: 300px;
+    justify-self: center;
+  }
+}
+
+/* Small Tablets / Large Phones */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .about-image {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .about-highlights {
+    text-align: left;
+  }
+
+  .about-contact {
+    justify-content: center;
+  }
+  
+  .experience-badge {
+    padding: 1rem;
+  }
+  
+  .experience-badge .years {
+    font-size: 1.5rem;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 576px) {
+  .about-image {
+    max-width: 240px;
+  }
+  
+  .avatar-large span {
+    font-size: 4rem;
+  }
+  
+  .highlight {
+    padding: 0.875rem;
+  }
+  
+  .highlight-icon {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .about-contact {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 375px) {
+  .about-image {
+    max-width: 200px;
+  }
+  
+  .experience-badge {
+    bottom: -0.5rem;
+    right: -0.5rem;
+    padding: 0.75rem;
+  }
+  
+  .experience-badge .years {
+    font-size: 1.25rem;
+  }
+  
+  .experience-badge .text {
+    font-size: 0.65rem;
+  }
+}
